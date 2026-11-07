@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Tống Minh Thùy – Talent Acquisition for games, creative and tech. CV and portfolio.">
 <title>Tống Minh Thùy – Recruiter · Games, Creative &amp; Tech</title>
+<script>document.documentElement.classList.add("js")</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Mali:wght@500;600;700&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
 <style>
@@ -136,9 +137,54 @@ html.js .reveal.in{opacity:1;transform:none}
 .card{transition:transform .25s ease,box-shadow .25s ease}
 .card:hover{transform:translateY(-4px);box-shadow:0 10px 24px rgba(59,36,24,.12)}
 @media (prefers-reduced-motion:reduce){html.js .reveal{opacity:1;transform:none;transition:none}.lantern,.quote svg path:first-child{animation:none}.card:hover{transform:none}}
+
+/* ===== loader (noren curtain) ===== */
+#loader{display:none}
+html.js #loader{display:flex;position:fixed;inset:0;z-index:200;background:var(--cream);flex-direction:column;align-items:center;justify-content:center;transition:transform .8s cubic-bezier(.7,0,.2,1)}
+#loader.done{transform:translateY(-100%)}
+.l-rod{width:min(520px,80vw);height:12px;border-radius:6px;background:var(--wood)}
+.l-panels{width:min(470px,72vw);display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:-2px}
+.l-panels span{height:120px;background:var(--noren);border-radius:0 0 10px 10px;transform-origin:top;transform:scaleY(0);animation:drop .55s cubic-bezier(.2,.8,.2,1) forwards;display:flex;align-items:center;justify-content:center}
+.l-panels span:nth-child(2){animation-delay:.12s}.l-panels span:nth-child(3){animation-delay:.24s}
+.l-panels i{font-style:normal;font-family:'Mali',cursive;font-weight:700;font-size:26px;color:var(--noren);background:var(--cream);width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;opacity:0;animation:fadein .4s .55s forwards}
+.l-name{font-family:'Dancing Script',cursive;font-weight:700;font-size:40px;color:var(--noren);margin-top:22px;opacity:0;animation:fadein .5s .7s forwards}
+@keyframes drop{to{transform:scaleY(1)}}
+@keyframes fadein{to{opacity:1}}
+
+/* ===== hero fly-in ===== */
+html.js .hero .kicker,html.js .hero h1,html.js .hero .lead,html.js .hero .btns{opacity:0;transform:translateY(40px)}
+html.js .hero .photo{opacity:0;transform:translateX(80px) rotate(4deg)}
+html.js body.ready .hero .kicker,html.js body.ready .hero h1,html.js body.ready .hero .lead,html.js body.ready .hero .btns,html.js body.ready .hero .photo{opacity:1;transform:none;transition:opacity .8s ease,transform .9s cubic-bezier(.2,.8,.2,1)}
+html.js body.ready .hero h1{transition-delay:.12s}
+html.js body.ready .hero .lead{transition-delay:.24s}
+html.js body.ready .hero .btns{transition-delay:.36s}
+html.js body.ready .hero .photo{transition-delay:.2s}
+
+/* ===== full-screen stacking sections ===== */
+section.stack{position:sticky;min-height:100vh;display:flex;flex-direction:column;justify-content:center;background:var(--cream);border-radius:32px 32px 0 0;box-shadow:0 -14px 34px rgba(59,36,24,.10);padding:96px 0 80px}
+section.stack:nth-of-type(even){background:#F6E9D3}
+#contact.stack{background:#F2DFC2}
+.hero{min-height:calc(100vh - 210px);display:flex;align-items:center}
+footer{position:relative;background:#F2DFC2;margin:0;padding:24px 0 40px}
+
+/* stronger fly-ins */
+html.js .reveal.from-left{transform:translateX(-60px)}
+html.js .reveal.from-right{transform:translateX(60px)}
+html.js .reveal.zoom{transform:scale(.92) translateY(20px)}
+html.js .reveal.in{transform:none}
+@media (prefers-reduced-motion:reduce){
+  html.js #loader{display:none}
+  html.js .hero .kicker,html.js .hero h1,html.js .hero .lead,html.js .hero .btns,html.js .hero .photo{opacity:1;transform:none}
+  section.stack{position:relative;top:auto !important}
+}
 </style>
 </head>
 <body id="top">
+<div id="loader" aria-hidden="true">
+  <div class="l-rod"></div>
+  <div class="l-panels"><span></span><span><i>T</i></span><span></span></div>
+  <div class="l-name">Minh Thùy</div>
+</div>
 
 
 <header>
@@ -185,7 +231,7 @@ html.js .reveal.in{opacity:1;transform:none}
   </div>
 </section>
 
-<section id="about" style="padding-top:0">
+<section id="about" class="stack">
   <div class="wrap">
     <div class="quote">
       <svg aria-hidden="true" width="84" height="76" viewBox="0 0 64 58"><path d="M22 4 q-5 6 0 12 q5 6 0 12 M32 2 q-5 6 0 12 q5 6 0 12 M42 4 q-5 6 0 12 q5 6 0 12" stroke="#A4532C" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M4 32 H60 Q58 54 32 55 Q6 54 4 32 Z" fill="#FBF3E4" stroke="#6B4430" stroke-width="2.5" stroke-linejoin="round"/><path d="M14 40 H50" stroke="#F2B8C2" stroke-width="3" stroke-linecap="round"/></svg>
@@ -225,9 +271,8 @@ html.js .reveal.in{opacity:1;transform:none}
   </div>
 </section>
 
-<svg class="wave wrap" aria-hidden="true" viewBox="0 0 1000 12" preserveAspectRatio="none"><path d="M0 6 Q 12.5 0 25 6 T 50 6 T 75 6 T 100 6 T 125 6 T 150 6 T 175 6 T 200 6 T 225 6 T 250 6 T 275 6 T 300 6 T 325 6 T 350 6 T 375 6 T 400 6 T 425 6 T 450 6 T 475 6 T 500 6 T 525 6 T 550 6 T 575 6 T 600 6 T 625 6 T 650 6 T 675 6 T 700 6 T 725 6 T 750 6 T 775 6 T 800 6 T 825 6 T 850 6 T 875 6 T 900 6 T 925 6 T 950 6 T 975 6 T 1000 6" fill="none" stroke="#D9B48F" stroke-width="2"/></svg>
 
-<section id="work">
+<section id="work" class="stack">
   <div class="wrap">
     <p class="kicker"><span data-l="en">Portfolio</span><span data-l="vi">Portfolio</span></p>
     <h2><span data-l="en">Hiring highlights</span><span data-l="vi">Dấu ấn tuyển dụng</span></h2>
@@ -309,7 +354,7 @@ html.js .reveal.in{opacity:1;transform:none}
   </div>
 </section>
 
-<section id="experience" style="background:#F7EBD6">
+<section id="experience" class="stack">
   <div class="wrap">
     <h2><span data-l="en">Experience</span><span data-l="vi">Kinh nghiệm</span></h2>
     <div class="job">
@@ -351,7 +396,7 @@ html.js .reveal.in{opacity:1;transform:none}
   </div>
 </section>
 
-<section id="story">
+<section id="story" class="stack">
   <div class="wrap">
     <p class="kicker"><span data-l="en">My story</span><span data-l="vi">Câu chuyện</span></p>
     <h2><span data-l="en">What my GM said at my interview</span><span data-l="vi">GM nói gì khi phỏng vấn tôi</span></h2>
@@ -370,7 +415,7 @@ html.js .reveal.in{opacity:1;transform:none}
   </div>
 </section>
 
-<section style="padding-top:0">
+<section id="tools" class="stack">
   <div class="wrap two">
     <div>
       <h2><span data-l="en">Toolkit</span><span data-l="vi">Công cụ</span></h2>
@@ -391,7 +436,7 @@ html.js .reveal.in{opacity:1;transform:none}
   </div>
 </section>
 
-<section id="contact" class="contact" style="background:var(--card)">
+<section id="contact" class="contact stack">
   <div class="wrap">
     <h2 style="margin-bottom:6px"><span data-l="en">Let’s talk</span><span data-l="vi">Cùng trò chuyện nhé</span></h2>
     <p style="margin:0" data-l="en">Open to Talent Acquisition and Recruitment Consultant roles in games, tech and creative — in-house or agency.</p>
@@ -414,8 +459,20 @@ html.js .reveal.in{opacity:1;transform:none}
 <script>
 (function(){
   document.documentElement.classList.add('js');
-  var targets=document.querySelectorAll('main section h2, main section .kicker, .hero .text, .hero .photo, .quote, .two > div, .ways .way, .cards .card, .job, .gm, .chips, .offbox, .contact .sig, .contact .lines');
+  var targets=document.querySelectorAll('main section.stack h2, main section.stack .kicker, .quote, .two > div, .ways .way, .cards .card, .job, .gm, .chips, .offbox, .contact .sig, .contact .lines');
   targets.forEach(function(el){el.classList.add('reveal');});
+  document.querySelectorAll('.two > div:first-child, .job .when, .gm').forEach(function(el){el.classList.add('from-left');});
+  document.querySelectorAll('.two > div:last-child, .offbox').forEach(function(el){el.classList.add('from-right');});
+  document.querySelectorAll('.cards .card, .quote').forEach(function(el){el.classList.add('zoom');});
+  /* loader + hero */
+  var loader=document.getElementById('loader');
+  function openPage(){ if(!loader||loader.classList.contains('done')) return; loader.classList.add('done'); setTimeout(function(){document.body.classList.add('ready');},250); setTimeout(function(){loader.remove();},1000); }
+  if(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches){ if(loader) loader.remove(); document.body.classList.add('ready'); }
+  else { setTimeout(openPage,1500); window.addEventListener('load',function(){setTimeout(openPage,1300);}); setTimeout(openPage,3000); }
+  /* sticky stacking: tall sections scroll fully before the next one slides over */
+  var stacks=[].slice.call(document.querySelectorAll('section.stack'));
+  function layout(){ var nav=document.getElementById('navbar'); var nh=nav?nav.offsetHeight:0; stacks.forEach(function(el){ el.style.top=Math.min(nh, window.innerHeight-el.offsetHeight)+'px'; }); }
+  window.addEventListener('resize',layout); window.addEventListener('load',layout); layout();
   document.querySelectorAll('.cards, .ways').forEach(function(g){[].forEach.call(g.children,function(c,i){c.style.transitionDelay=(Math.min(i,5)*80)+'ms';});});
   if('IntersectionObserver' in window){
     var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
@@ -446,7 +503,7 @@ html.js .reveal.in{opacity:1;transform:none}
   var ids=Object.keys(links);
   function spy(){
     var pos=(window.scrollY||0)+120, cur=null;
-    ids.forEach(function(id){var el=document.getElementById(id); if(el && el.offsetTop<=pos) cur=id;});
+    var nh=bar.offsetHeight+40; ids.forEach(function(id){var el=document.getElementById(id); if(el && el.getBoundingClientRect().top<=nh) cur=id;});
     if((window.innerHeight+(window.scrollY||0))>=document.body.scrollHeight-4) cur=ids[ids.length-1];
     ids.forEach(function(id){links[id].classList.toggle('active', id===cur); if(id===cur){links[id].setAttribute('aria-current','true');}else{links[id].removeAttribute('aria-current');}});
     if(cur&&links[cur].scrollIntoView&&window.innerWidth<=640){var m=links[cur].parentNode; m.scrollLeft=links[cur].offsetLeft-m.clientWidth/2+links[cur].clientWidth/2;}
