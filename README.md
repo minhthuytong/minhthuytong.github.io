@@ -1,6 +1,6 @@
 # Tống Minh Thùy – Recruiter
 
-Talent Acquisition & Recruitment Consultant · Games, Creative & Tech
+Talent Acquisition & Recruitment Consultant
 
 - Book version: https://minhthuytong.github.io
 - Scroll version: https://minhthuytong.github.io/scroll.html
