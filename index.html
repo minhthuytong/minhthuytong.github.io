@@ -85,6 +85,8 @@ nav.menu a{text-decoration:none;padding:10px 4px;min-height:44px;display:inline-
 
 /* two col */
 .two{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:36px}
+.two h2{font-size:clamp(24px,3vw,32px)}
+.nb{white-space:nowrap}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
 .chip{border:2px solid var(--wood);border-radius:999px;padding:5px 14px;font-weight:700;font-size:15px;background:#FFFaf1}
 .offbox{background:var(--card);border-radius:20px;padding:26px 28px}
@@ -150,7 +152,7 @@ footer{text-align:center;font-size:14px;color:var(--ink-soft);padding:30px 0 48p
     </div>
     <div class="two" style="margin-top:44px">
       <div>
-        <h2><span data-l="en">Why I recruit</span><span data-l="vi">Vì sao tôi làm tuyển dụng</span></h2>
+        <h2><span data-l="en">Why I recruit</span><span data-l="vi">Vì sao tôi làm <span class="nb">tuyển dụng</span></span></h2>
         <p data-l="en" style="margin:0">Every conversation opens a new industry and a new personality. I like being useful in the middle: setting honest expectations, telling each candidate’s story well to the hiring team, and helping that team find someone who truly fits.</p>
         <p data-l="vi" style="margin:0">Mỗi cuộc trò chuyện mở ra một ngành nghề mới, một cá tính mới. Tôi thích được làm người ở giữa có ích: nói rõ kỳ vọng thật, kể đúng câu chuyện của ứng viên với đội tuyển dụng, và giúp đội tìm được người thật sự phù hợp.</p>
       </div>
