@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Tống Minh Thùy – Talent Acquisition for games, creative and tech. CV and portfolio.">
+<title>Tống Minh Thùy – Talent Acquisition</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Mali:wght@500;600;700&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#FBF3E4; --card:#F5E6CC; --ink:#3B2418; --ink-soft:#6B4A36; --wood:#6B4430;
+  --noren:#4F6F96; --rust:#A4532C; --orange:#D9774B; --pink:#F2B8C2; --yellow:#E8B54A; --dot:#C9A07A;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--cream);color:var(--ink);font-family:'Nunito',system-ui,sans-serif;font-size:17px;line-height:1.6}
+html[data-lang="en"] [data-l="vi"], html[data-lang="vi"] [data-l="en"]{display:none !important}
+a{color:var(--ink)} a:hover{color:var(--rust)}
+h1,h2,h3{font-family:'Mali',cursive;line-height:1.2;margin:0}
+.wrap{max-width:1040px;margin:0 auto;padding:0 28px}
+section{padding:72px 0}
+.kicker{font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--rust);margin:0 0 10px}
+h2{font-size:clamp(28px,4vw,38px);margin-bottom:28px}
+.wave{display:block;width:100%;height:12px}
+
+/* noren */
+.noren{position:relative;height:150px;max-width:1040px;margin:0 auto}
+.rod{position:absolute;left:16px;right:16px;top:20px;height:14px;background:var(--wood);border-radius:7px}
+.panels{position:absolute;left:44px;right:44px;top:30px;display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
+.panel{height:110px;background:var(--noren);border-radius:0 0 12px 12px;display:flex;align-items:center;justify-content:center}
+.crest{width:58px;height:58px;border-radius:50%;background:var(--cream);color:var(--noren);font-family:'Mali',cursive;font-weight:700;font-size:28px;display:flex;align-items:center;justify-content:center}
+.lantern{position:absolute;right:58px;top:30px}
+.topbar{display:flex;justify-content:flex-end;gap:10px;padding:14px 28px 0;max-width:1040px;margin:0 auto}
+.lang button{font:inherit;font-size:14px;font-weight:800;border:2px solid var(--wood);background:transparent;color:var(--ink);padding:8px 14px;min-height:44px;cursor:pointer}
+.lang button:first-child{border-radius:999px 0 0 999px}.lang button:last-child{border-radius:0 999px 999px 0;border-left:0}
+.lang button[aria-pressed="true"]{background:var(--wood);color:var(--cream)}
+nav.menu{display:flex;flex-wrap:wrap;gap:6px 22px;justify-content:center;padding:6px 0 0;font-weight:700;font-size:15px}
+nav.menu a{text-decoration:none;padding:10px 4px;min-height:44px;display:inline-flex;align-items:center}
+
+/* hero */
+.hero{padding:40px 0 64px}
+.hero .grid{display:flex;flex-wrap:wrap;gap:40px;align-items:center}
+.hero .text{flex:999 1 420px;min-width:0}
+.hero h1{font-size:clamp(42px,7vw,68px);margin:4px 0 16px}
+.hero p.lead{font-size:19px;max-width:560px;margin:0 0 26px}
+.photo{flex:1 1 240px;max-width:280px;margin:0 auto;position:relative}
+.photo img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:50% 15%;border-radius:140px 140px 16px 16px;border:6px solid var(--cream);box-shadow:0 0 0 2px var(--wood);display:block;background:#fff}
+.photo .dot{position:absolute;right:-8px;bottom:-8px;width:44px;height:44px;border-radius:50%;background:var(--pink);border:2px solid var(--wood)}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:0 22px;border-radius:999px;font-weight:800;text-decoration:none;border:2px solid var(--wood)}
+.btn.primary{background:var(--wood);color:var(--cream)} .btn.primary:hover{background:var(--ink);color:var(--cream)}
+
+/* quote */
+.quote{background:var(--card);border-radius:24px;padding:34px 38px;display:flex;gap:26px;align-items:center;flex-wrap:wrap}
+.quote p{font-family:'Mali',cursive;font-weight:600;font-size:clamp(20px,2.6vw,26px);line-height:1.45;margin:0;flex:1 1 380px}
+
+/* numbers */
+.nums{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px 48px}
+.row{display:flex;align-items:baseline;gap:10px}
+.row .lead-dots{flex:1;border-bottom:2px dotted var(--dot);transform:translateY(-5px)}
+.row b{font-family:'Mali',cursive;font-size:22px;color:var(--rust);white-space:nowrap}
+
+/* work */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:22px}
+.card{background:#FFFaf1;border:2px solid var(--wood);border-radius:18px;padding:24px 24px 22px;display:flex;flex-direction:column;gap:10px}
+.card .tag{align-self:flex-start;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;background:var(--pink);color:var(--ink);padding:4px 12px;border-radius:999px}
+.card .tag.blue{background:#D7E2F0}.card .tag.yellow{background:#F6E2B0}
+.card h3{font-size:22px}
+.card .big{font-family:'Mali',cursive;font-weight:700;font-size:30px;color:var(--rust);line-height:1.1}
+.card p{margin:0;color:var(--ink)}
+
+/* timeline */
+.job{display:grid;grid-template-columns:150px 1fr;gap:6px 28px;padding:22px 0;border-top:2px dotted var(--dot)}
+.job:first-of-type{border-top:0}
+.job .when{font-weight:800;color:var(--rust);font-size:15px}
+.job h3{font-size:22px}
+.job .where{font-weight:700;margin:2px 0 8px}
+.job ul{margin:0;padding-left:20px}
+@media (max-width:640px){.job{grid-template-columns:1fr}.panels{left:20px;right:20px}.lantern{right:26px}}
+
+/* gm */
+.gm{border-left:6px solid var(--pink);padding:6px 0 6px 28px}
+.gm blockquote{margin:0 0 14px;font-family:'Mali',cursive;font-weight:500;font-size:clamp(20px,2.6vw,25px);line-height:1.5}
+.gm p{margin:0;font-size:18px}
+
+/* two col */
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:36px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:2px solid var(--wood);border-radius:999px;padding:5px 14px;font-weight:700;font-size:15px;background:#FFFaf1}
+.offbox{background:var(--card);border-radius:20px;padding:26px 28px}
+
+/* contact */
+.contact{text-align:center}
+.contact .sig{font-family:'Dancing Script',cursive;font-weight:700;font-size:56px;color:var(--noren);line-height:1.2;margin:8px 0 18px}
+.contact .lines{display:flex;flex-direction:column;align-items:center;gap:12px}
+.cline{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px;font-weight:700;font-size:18px}
+.copy{font:inherit;font-size:14px;font-weight:800;min-height:44px;padding:0 16px;border-radius:999px;border:2px solid var(--wood);background:transparent;color:var(--ink);cursor:pointer}
+.copy:hover{background:var(--card)}
+footer{text-align:center;font-size:14px;color:var(--ink-soft);padding:30px 0 48px}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="lang" role="group" aria-label="Language">
+    <button type="button" data-set="en" aria-pressed="true">EN</button><button type="button" data-set="vi" aria-pressed="false">VI</button>
+  </div>
+</div>
+
+<header>
+  <div class="noren" aria-hidden="true">
+    <div class="rod"></div>
+    <div class="panels"><div class="panel"></div><div class="panel"><div class="crest">T</div></div><div class="panel"></div></div>
+    <svg class="lantern" width="40" height="120" viewBox="0 0 40 120"><line x1="20" y1="0" x2="20" y2="22" stroke="#6B4430" stroke-width="2"/><rect x="11" y="20" width="18" height="7" rx="2" fill="#6B4430"/><ellipse cx="20" cy="56" rx="19" ry="30" fill="#D9774B"/><path d="M3 46 Q20 50 37 46 M2 56 Q20 60 38 56 M3 66 Q20 70 37 66" stroke="#A4532C" stroke-width="1.5" fill="none"/><rect x="11" y="84" width="18" height="7" rx="2" fill="#6B4430"/><line x1="20" y1="91" x2="20" y2="108" stroke="#E8B54A" stroke-width="2"/></svg>
+  </div>
+  <nav class="menu" aria-label="Sections">
+    <a href="#about"><span data-l="en">About</span><span data-l="vi">Giới thiệu</span></a>
+    <a href="#work"><span data-l="en">Selected work</span><span data-l="vi">Dự án tiêu biểu</span></a>
+    <a href="#experience"><span data-l="en">Experience</span><span data-l="vi">Kinh nghiệm</span></a>
+    <a href="#contact"><span data-l="en">Contact</span><span data-l="vi">Liên hệ</span></a>
+  </nav>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap grid">
+    <div class="text">
+      <p class="kicker"><span data-l="en">Talent Acquisition · Games, Creative &amp; Tech</span><span data-l="vi">Tuyển dụng · Game, Creative &amp; Tech</span></p>
+      <h1>Tống Minh Thùy</h1>
+      <p class="lead" data-l="en">Recruiter with agency and in-house experience. I’ve closed a Senior Game Designer, taken engineers to offer stage, and filled 42+ positions in six months — and I treat every candidate as a person, not a pipeline.</p>
+      <p class="lead" data-l="vi">Chuyên viên tuyển dụng với kinh nghiệm cả agency lẫn in-house. Tôi từng tuyển thành công Senior Game Designer, đưa nhiều kỹ sư đến vòng offer và tuyển 42+ vị trí trong sáu tháng — luôn coi ứng viên là con người, không phải một con số trong pipeline.</p>
+      <div class="btns">
+        <a class="btn primary" href="#work"><span data-l="en">See my work</span><span data-l="vi">Xem dự án</span></a>
+        <a class="btn" href="#contact"><span data-l="en">Get in touch</span><span data-l="vi">Liên hệ tôi</span></a>
+      </div>
+    </div>
+    <div class="photo">
+      <img src="photo.jpg" alt="Portrait of Tống Minh Thùy">
+      <span class="dot" aria-hidden="true"></span>
+    </div>
+  </div>
+</section>
+
+<section id="about" style="padding-top:0">
+  <div class="wrap">
+    <div class="quote">
+      <svg aria-hidden="true" width="84" height="76" viewBox="0 0 64 58"><path d="M22 4 q-5 6 0 12 q5 6 0 12 M32 2 q-5 6 0 12 q5 6 0 12 M42 4 q-5 6 0 12 q5 6 0 12" stroke="#A4532C" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M4 32 H60 Q58 54 32 55 Q6 54 4 32 Z" fill="#FBF3E4" stroke="#6B4430" stroke-width="2.5" stroke-linejoin="round"/><path d="M14 40 H50" stroke="#F2B8C2" stroke-width="3" stroke-linecap="round"/></svg>
+      <p data-l="en">“The right hire fits the budget and the brief — and the team’s culture and taste. Finding that piece is my favourite part of the job.”</p>
+      <p data-l="vi">“Ứng viên phù hợp không chỉ khớp ngân sách và nhu cầu, mà còn hợp văn hoá và khẩu vị của đội. Tìm đúng mảnh ghép ấy là điều tôi thích nhất.”</p>
+    </div>
+    <div class="two" style="margin-top:44px">
+      <div>
+        <h2><span data-l="en">Why I recruit</span><span data-l="vi">Vì sao tôi làm tuyển dụng</span></h2>
+        <p data-l="en" style="margin:0">Every conversation opens a new industry and a new personality. I like being useful in the middle: setting honest expectations, telling each candidate’s story well to the hiring team, and helping that team find someone who truly fits.</p>
+        <p data-l="vi" style="margin:0">Mỗi cuộc trò chuyện mở ra một ngành nghề mới, một cá tính mới. Tôi thích được làm người ở giữa có ích: nói rõ kỳ vọng thật, kể đúng câu chuyện của ứng viên với đội tuyển dụng, và giúp đội tìm được người thật sự phù hợp.</p>
+      </div>
+      <div>
+        <h2><span data-l="en">In numbers</span><span data-l="vi">Bằng con số</span></h2>
+        <div class="nums" style="grid-template-columns:1fr">
+          <div class="row"><span data-l="en">Requisitions handled</span><span data-l="vi">Yêu cầu tuyển dụng đã xử lý</span><span class="lead-dots" aria-hidden="true"></span><b>65+</b></div>
+          <div class="row"><span data-l="en">Positions filled in 6 months</span><span data-l="vi">Vị trí tuyển thành công trong 6 tháng</span><span class="lead-dots" aria-hidden="true"></span><b>42+</b></div>
+          <div class="row"><span data-l="en">IT Supervisor candidates</span><span data-l="vi">Ứng viên IT Supervisor</span><span class="lead-dots" aria-hidden="true"></span><b><span data-l="en">10 in 2 days</span><span data-l="vi">10 trong 2 ngày</span></b></div>
+          <div class="row"><span data-l="en">Physician pipeline</span><span data-l="vi">Nguồn hồ sơ bác sĩ</span><span class="lead-dots" aria-hidden="true"></span><b>30+</b></div>
+          <div class="row"><span>Excellent Sales 2024, Cathay Life</span><span class="lead-dots" aria-hidden="true"></span><b>Top 4</b></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<svg class="wave wrap" aria-hidden="true" viewBox="0 0 1000 12" preserveAspectRatio="none"><path d="M0 6 Q 12.5 0 25 6 T 50 6 T 75 6 T 100 6 T 125 6 T 150 6 T 175 6 T 200 6 T 225 6 T 250 6 T 275 6 T 300 6 T 325 6 T 350 6 T 375 6 T 400 6 T 425 6 T 450 6 T 475 6 T 500 6 T 525 6 T 550 6 T 575 6 T 600 6 T 625 6 T 650 6 T 675 6 T 700 6 T 725 6 T 750 6 T 775 6 T 800 6 T 825 6 T 850 6 T 875 6 T 900 6 T 925 6 T 950 6 T 975 6 T 1000 6" fill="none" stroke="#D9B48F" stroke-width="2"/></svg>
+
+<section id="work">
+  <div class="wrap">
+    <p class="kicker"><span data-l="en">Portfolio</span><span data-l="vi">Portfolio</span></p>
+    <h2><span data-l="en">Selected work</span><span data-l="vi">Dự án tiêu biểu</span></h2>
+    <div class="cards">
+      <article class="card">
+        <span class="tag">Game &amp; Creative · Agency</span>
+        <h3><span data-l="en">Senior Game Designer, closed</span><span data-l="vi">Tuyển thành công Senior Game Designer</span></h3>
+        <p data-l="en">Full-cycle search for a game client at DigiSource, from sourcing to offer. Also closed Graphic Designer and Content Creator roles.</p>
+        <p data-l="vi">Tuyển trọn quy trình cho khách hàng game tại DigiSource, từ tìm nguồn đến offer. Cùng với đó là Graphic Designer và Content Creator.</p>
+      </article>
+      <article class="card">
+        <span class="tag blue">Tech · Agency</span>
+        <h3><span data-l="en">Engineers to offer stage</span><span data-l="vi">Đưa kỹ sư đến vòng offer</span></h3>
+        <p data-l="en">Built pipelines for Data Engineer, Flutter Engineer and Fullstack Engineer (ReactJS/Golang) roles and took candidates to final interview and offer, using LinkedIn Recruiter, Boolean and X-Ray search.</p>
+        <p data-l="vi">Xây dựng nguồn ứng viên cho Data Engineer, Flutter Engineer và Fullstack Engineer (ReactJS/Golang), đưa ứng viên đến vòng cuối và offer bằng LinkedIn Recruiter, Boolean và X-Ray.</p>
+      </article>
+      <article class="card">
+        <span class="tag blue">Tech · In-house</span>
+        <div class="big"><span data-l="en">10 in 2 days</span><span data-l="vi">10 người / 2 ngày</span></div>
+        <h3><span data-l="en">A critical IT Supervisor hire</span><span data-l="vi">Vị trí IT Supervisor gấp</span></h3>
+        <p data-l="en">Identified 10 qualified IT Supervisor candidates within two days for a critical technology need at the hospital.</p>
+        <p data-l="vi">Tìm được 10 ứng viên IT Supervisor đạt yêu cầu trong hai ngày cho một nhu cầu công nghệ gấp của bệnh viện.</p>
+      </article>
+      <article class="card">
+        <span class="tag yellow">High volume · In-house</span>
+        <div class="big">65+ / 42+</div>
+        <h3><span data-l="en">Six months of hiring</span><span data-l="vi">Sáu tháng tuyển dụng</span></h3>
+        <p data-l="en">Handled 65+ requisitions and filled 42+ positions across clinical, technical, commercial and corporate functions, from frontline roles to department heads.</p>
+        <p data-l="vi">Xử lý 65+ yêu cầu tuyển dụng và tuyển thành công 42+ vị trí ở các khối chuyên môn, kỹ thuật, kinh doanh và văn phòng, từ nhân viên đến trưởng khoa.</p>
+      </article>
+      <article class="card">
+        <span class="tag yellow">Hard to fill · In-house</span>
+        <div class="big">30+</div>
+        <h3><span data-l="en">Physician pipeline</span><span data-l="vi">Nguồn hồ sơ bác sĩ</span></h3>
+        <p data-l="en">Built a pipeline of 30+ physician profiles across multiple medical specialties in six months.</p>
+        <p data-l="vi">Xây dựng nguồn 30+ hồ sơ bác sĩ thuộc nhiều chuyên khoa trong sáu tháng.</p>
+      </article>
+      <article class="card">
+        <span class="tag">Leadership · In-house</span>
+        <div class="big"><span data-l="en">2 in a week</span><span data-l="vi">2 người / 1 tuần</span></div>
+        <h3><span data-l="en">CMO search</span><span data-l="vi">Tìm kiếm CMO</span></h3>
+        <p data-l="en">Attracted two CMO candidates within a week, before the search was closed in favour of an internal appointment.</p>
+        <p data-l="vi">Thu hút hai ứng viên CMO trong một tuần, trước khi vị trí được ưu tiên bổ nhiệm nội bộ.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="experience" style="background:#F7EBD6">
+  <div class="wrap">
+    <h2><span data-l="en">Experience</span><span data-l="vi">Kinh nghiệm</span></h2>
+    <div class="job">
+      <div class="when"><span data-l="en">Jan 2026 – Now</span><span data-l="vi">01/2026 – nay</span></div>
+      <div>
+        <h3><span data-l="en">HR Executive</span><span data-l="vi">Chuyên viên Nhân sự</span></h3>
+        <div class="where"><span data-l="en">Hoan My Binh Phuoc Hospital · In-house</span><span data-l="vi">Bệnh viện Hoàn Mỹ Bình Phước · In-house</span></div>
+        <ul data-l="en"><li>Full-cycle recruitment for clinical, IT/HIS, commercial and corporate roles, from intake to onboarding</li><li>Partner with hiring managers and department heads on needs and selection</li><li>Maintain hiring dashboards and reports; coordinate engagement activities and internal events</li></ul>
+        <ul data-l="vi"><li>Tuyển dụng trọn quy trình cho khối chuyên môn, IT/HIS, kinh doanh và văn phòng, từ tiếp nhận yêu cầu đến onboarding</li><li>Phối hợp với quản lý và trưởng khoa, phòng về nhu cầu và tuyển chọn</li><li>Theo dõi dashboard, báo cáo tuyển dụng; điều phối hoạt động gắn kết và sự kiện nội bộ</li></ul>
+      </div>
+    </div>
+    <div class="job">
+      <div class="when"><span data-l="en">Jul 2025 – Jan 2026</span><span data-l="vi">07/2025 – 01/2026</span></div>
+      <div>
+        <h3>Recruitment Consultant</h3>
+        <div class="where">DigiSource · Agency</div>
+        <ul data-l="en"><li>Full-cycle IT, game and creative recruitment for multiple clients</li><li>Sourced with LinkedIn Recruiter, Boolean and X-Ray search, job boards and referrals</li><li>Worked directly with clients on requirements, hiring strategy and timelines; supported employer branding and events</li></ul>
+        <ul data-l="vi"><li>Tuyển dụng trọn quy trình mảng IT, game và creative cho nhiều khách hàng</li><li>Tìm nguồn qua LinkedIn Recruiter, Boolean, X-Ray, job board và giới thiệu</li><li>Làm việc trực tiếp với khách hàng về yêu cầu, chiến lược và tiến độ; hỗ trợ employer branding và sự kiện</li></ul>
+      </div>
+    </div>
+    <div class="job">
+      <div class="when"><span data-l="en">Apr 2025 – May 2025</span><span data-l="vi">04/2025 – 05/2025</span></div>
+      <div>
+        <h3>Recruitment Consultant</h3>
+        <div class="where">RRecruiter · Agency</div>
+        <ul data-l="en"><li>Sourced niche talent with Boolean and Google X-Ray search; shortlisted and coordinated interviews</li></ul>
+        <ul data-l="vi"><li>Tìm nguồn ứng viên ngách bằng Boolean và Google X-Ray; lập shortlist và điều phối phỏng vấn</li></ul>
+      </div>
+    </div>
+    <div class="job">
+      <div class="when">2021 – 2025</div>
+      <div>
+        <h3><span data-l="en">Bachelor of Business Administration</span><span data-l="vi">Cử nhân Quản trị Kinh doanh</span></h3>
+        <div class="where"><span data-l="en">Ho Chi Minh University of Banking · GPA 3.1</span><span data-l="vi">ĐH Ngân hàng TP.HCM · GPA 3.1</span></div>
+        <ul data-l="en"><li>Top 4 Excellent Sales 2024, Cathay Life · TOEIC L&amp;R 780, S&amp;W 300 · MOS 2019</li></ul>
+        <ul data-l="vi"><li>Top 4 Excellent Sales 2024, Cathay Life · TOEIC L&amp;R 780, S&amp;W 300 · MOS 2019</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="kicker"><span data-l="en">A story</span><span data-l="vi">Một câu chuyện</span></p>
+    <h2><span data-l="en">What my GM said at my interview</span><span data-l="vi">GM nói gì khi phỏng vấn tôi</span></h2>
+    <div class="gm">
+      <blockquote data-l="en">“This girl talks a lot — I don’t know yet if she can deliver, but she is seriously persuasive.”</blockquote>
+      <blockquote data-l="vi">“Con bé này nói quá trời, chưa biết làm được không nhưng thuyết phục ghê gớm.”</blockquote>
+      <p data-l="en">I persuaded the GM to hire me. Six months later: 65+ requisitions handled and 42+ positions filled.</p>
+      <p data-l="vi">Và tôi đã thuyết phục được GM tuyển mình. Sáu tháng sau: 65+ yêu cầu tuyển dụng, 42+ vị trí tuyển thành công.</p>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap two">
+    <div>
+      <h2><span data-l="en">Toolkit</span><span data-l="vi">Công cụ</span></h2>
+      <div class="chips">
+        <span class="chip">LinkedIn Recruiter</span><span class="chip">Boolean search</span><span class="chip">X-Ray search</span>
+        <span class="chip"><span data-l="en">Full-cycle hiring</span><span data-l="vi">Tuyển trọn quy trình</span></span>
+        <span class="chip"><span data-l="en">Hiring manager intake</span><span data-l="vi">Tiếp nhận yêu cầu</span></span>
+        <span class="chip"><span data-l="en">Dashboards &amp; reports</span><span data-l="vi">Dashboard &amp; báo cáo</span></span>
+        <span class="chip">Employer branding</span>
+        <span class="chip"><span data-l="en">Offer negotiation</span><span data-l="vi">Đàm phán offer</span></span>
+      </div>
+    </div>
+    <div class="offbox">
+      <h2 style="margin-bottom:14px"><span data-l="en">Off the clock</span><span data-l="vi">Ngoài giờ làm</span></h2>
+      <p data-l="en" style="margin:0">Audition and other rhythm games, farm sims, strategy and management games, PUBG, Valorant and <i>Where Winds Meet</i>. I know the players — which helps me find the people who make the games.</p>
+      <p data-l="vi" style="margin:0">Audition và các game nhịp điệu, game nông trại, game quản lý – chiến thuật, PUBG, Valorant và <i>Where Winds Meet</i>. Hiểu người chơi giúp tôi tìm đúng những người làm ra game.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact" style="background:var(--card)">
+  <div class="wrap">
+    <h2 style="margin-bottom:6px"><span data-l="en">Let’s talk</span><span data-l="vi">Cùng trò chuyện nhé</span></h2>
+    <p style="margin:0" data-l="en">Open to Talent Acquisition roles in games, tech and creative.</p>
+    <p style="margin:0" data-l="vi">Sẵn sàng cho các vị trí Talent Acquisition trong mảng game, tech và creative.</p>
+    <div class="sig">Minh Thùy</div>
+    <div class="lines">
+      <div class="cline"><span>mt18014work@gmail.com</span><button class="copy" type="button" data-copy="mt18014work@gmail.com"><span data-l="en">Copy email</span><span data-l="vi">Sao chép email</span></button></div>
+      <div class="cline"><a href="https://www.linkedin.com/in/minhthuytong/">linkedin.com/in/minhthuytong</a></div>
+      <div class="cline" style="font-weight:600;font-size:16px"><span data-l="en">Thu Duc, Ho Chi Minh City</span><span data-l="vi">Thủ Đức, TP. Hồ Chí Minh</span></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>© 2026 Tống Minh Thùy</footer>
+
+<script>
+(function(){
+  var root=document.documentElement;
+  function setLang(l){
+    root.setAttribute('data-lang',l); root.setAttribute('lang',l);
+    document.querySelectorAll('.lang button').forEach(function(b){b.setAttribute('aria-pressed', b.getAttribute('data-set')===l?'true':'false');});
+    try{localStorage.setItem('mt-lang',l);}catch(e){}
+  }
+  var saved=null; try{saved=localStorage.getItem('mt-lang');}catch(e){}
+  if(saved==='vi'||saved==='en') setLang(saved);
+  document.querySelectorAll('.lang button').forEach(function(b){b.addEventListener('click',function(){setLang(b.getAttribute('data-set'));});});
+  document.querySelectorAll('.copy').forEach(function(b){
+    b.addEventListener('click',function(){
+      var txt=b.getAttribute('data-copy'); var spans=b.querySelectorAll('span'); var old=[].map.call(spans,function(s){return s.textContent;});
+      function done(ok){ spans[0].textContent= ok?'Copied':'Copy failed'; spans[1].textContent= ok?'Đã sao chép':'Không sao chép được'; setTimeout(function(){spans[0].textContent=old[0];spans[1].textContent=old[1];},1800); }
+      try{ navigator.clipboard.writeText(txt).then(function(){done(true);},function(){done(false);}); }catch(e){ done(false); }
+    });
+  });
+})();
+</script>
+</body>
+</html>

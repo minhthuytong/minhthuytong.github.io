@@ -1,2 +1,3 @@
-# minhthuytong.github.io
-Tống Minh Thùy – Talent Acquisition CV &amp; Portfolio
+# Tống Minh Thùy – Talent Acquisition
+
+CV & portfolio: https://minhthuytong.github.io
